@@ -1,0 +1,93 @@
+@font-face {
+    font-family: font;
+    src: url(Dirooz.ttf);
+}
+#container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(4, 13, 115);
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+#dropdown-button{
+    position: relative;
+    width: 200px;
+    height: 60px;
+   }
+   #dropdown-button label{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.469);
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+   }
+   #dropdown-button label span{
+    position: relative;
+     font-family: font;
+     font-size: 15px;
+     color: rgb(226, 223, 223);
+   }
+   #dropdown-button label svg{
+  position: absolute;
+    width: 20px;
+    right:25px;
+    color: rgb(226, 223, 223);
+    transition: 500ms;
+   }
+   #dropdown-button input:checked~#content{
+    height: 150px;
+   }
+   #dropdown-button input:checked~label svg{
+    transform: rotate(180deg);
+      }
+   #content{
+    position: relative;
+    top: 10%;
+    width: 200px;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0.33);
+    border-radius: 6px;
+    transition: 500ms;
+    overflow: hidden;
+     }
+   #content a{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    place-items: center;
+    flex-direction: row;
+    width: 100%;
+    height:50px;
+    gap:7px;
+ cursor: pointer;
+   }
+    #content a::after{
+    content: "";
+    position: absolute;
+    top:100%;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(50, 49, 49, 0.21);
+   }
+   #content a:last-child:after{
+    height: 0;
+   }
+   #content a span{
+    font-size: 13px;
+    font-family: font;
+    color: rgb(195, 186, 186);
+   }
+   #content a svg{
+    width: 20px;
+    margin-right: 10px;
+    color: rgb(195, 186, 186);
+   }
